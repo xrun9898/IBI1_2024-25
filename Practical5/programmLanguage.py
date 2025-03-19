@@ -42,6 +42,6 @@ plt.grid(axis='y')
 
 plt.show()  
 
-input_language =input("想查的语言")   
+input_language =input()   
 percentage = lang_popularity.get(input_language, "Language not found!")  
 print(f"The percentage of developers who use {input_language} is: {percentage}%") 
