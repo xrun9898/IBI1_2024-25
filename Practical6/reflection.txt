@@ -1,0 +1,2 @@
+I think the three mission is not easy, but is also not that difficlut. The best part i think is to make the heatplot,because it is intuitive.
+I think I learnt how to use numpy basically through the practice.
