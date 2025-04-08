@@ -33,6 +33,9 @@ days = 100
 population_size = (100, 100)
 population = np.zeros(population_size)   
 outbreak = np.random.choice(range(100), 2)  
+for i in range(1000):
+    vaccination = np.random.choice(range(100), 2)
+    population[vaccination[0], vaccination[1]] = 2
 population[outbreak[0], outbreak[1]] = 1 
 colors = ['blue', 'green', 'yellow']  
 cmap = ListedColormap(colors)  
