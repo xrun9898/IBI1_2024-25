@@ -10,12 +10,12 @@ from random import randint
 # e.g. ceil(4.2)=5
 from math import ceil
 
-progress=0
-while progress>=0:
-	progress+=1
-	first_n = randint(1,6)
-	second_n = randint(1,6)
-	if first_n == second_n:
-		print(progress)
-		break
+progress=0						# Initialize progress		
+while progress>=0:				# Start a loop
+	progress+=1					# Increase progress by 1
+	first_n = randint(1,6)		# Draw a random number between 1 and 6
+	second_n = randint(1,6)		# Draw a random number between 1 and 6
+	if first_n == second_n:		# If the two numbers are the same
+		print(progress)			# Print the number of iterations
+		break					# Exit the loop
 

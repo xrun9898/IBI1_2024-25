@@ -6,15 +6,6 @@ elif bmi<=30: Normal
 elif bmi>30: Obesity
 ouput: bmi, status'''
 
-
-
-
-
-
-
-
-
-
 weight=int(input("weight?"))
 height=int(input("height?"))
 bmi=weight/(height/100)**2
