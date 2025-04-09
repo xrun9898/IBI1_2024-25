@@ -13,6 +13,8 @@ def find_restriction_sites(dnaSequence, recognitionSequence):
     for i in range(dna_length - recog_length + 1):    
         if dnaSequence[i:i + recog_length] == recognitionSequence:  
             cut_sites.append(i)  
+    if cut_sites == [] :
+        return "can't find restriction site"
     return cut_sites  
 
 dna_sequence = "ACGTACGTGACGTACG"  
