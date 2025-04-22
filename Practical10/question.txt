@@ -1,1 +1,7 @@
-How has the DALYs changed in China countries over time
+question: How has the DALYs changed in China countries over time
+
+the program is start from line 35
+
+discussion: The plot shows a general decrease in DALYs,then i compare 
+the DALYs between two adjacent year and find every year is lower then 
+the last year, so it is decreasing.
