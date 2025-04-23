@@ -8,7 +8,7 @@ print(dalys_data.iloc[0:10,2])
 print(f"the 10th year with DALYs data recorded in Afghanistan was {dalys_data.iloc[10,2]}. ")
 
 boolean_index = dalys_data['Year'] == 1990  
-dalys_1990 = dalys_data.loc[boolean_index, ['Entity', 'DALYs']]  
+dalys_1990 = dalys_data.loc[boolean_index, [True,False,False,True ]]  
 print(dalys_1990)
 
 
