@@ -3,10 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
+os.chdir("C:/Users/Xutianrun/Desktop/IBI1_2024-25/Practical10")
+print(os.getcwd())
 dalys_data = pd.read_csv("C:/Users/Xutianrun/Desktop/IBI1_2024-25/Practical10/dalys-rate-from-all-causes.csv")
 print(dalys_data.iloc[0:10,2])
-print(f"the 10th year with DALYs data recorded in Afghanistan was {dalys_data.iloc[10,2]}. ")
-
+print(f"the 10th year with DALYs data recorded in Afghanistan was {dalys_data.iloc[9,2]}. ")
+#the 10th year with DALYs data recorded in Afghanistan was 1999
 boolean_index = dalys_data['Year'] == 1990  
 dalys_1990 = dalys_data.loc[boolean_index, [True,False,False,True ]]  
 print(dalys_1990)
@@ -14,6 +16,10 @@ print(dalys_1990)
 
 uk = dalys_data.loc[dalys_data.Entity=="United Kingdom", ["DALYs", "Year"]]
 plt.plot(uk.Year, uk.DALYs, 'bo')
+plt.title("DALYs in the UK")
+plt.xlabel("Year")  
+plt.ylabel("DALYs")
+
 plt.show()
 uk.year = uk.Year.astype(str)
 uk.DALYs = uk.DALYs.astype(float)
@@ -30,11 +36,14 @@ if ukMean > frMean:
     print("The average DALYs in the UK is higher than that in France.")
 else:   
     print("The average DALYs in France is higher than that in the UK.")
-
+#The average DALYs in the UK is higher than that in France.
 
 #answer the question
 cn = dalys_data.loc[dalys_data.Entity=="China", ["DALYs", "Year"]]
 plt.plot(cn.Year, cn.DALYs, 'bo')
+plt.title("DALYs in China")
+plt.xlabel("Year")
+plt.ylabel("DALYs")
 plt.show()
 less=0
 more=0
