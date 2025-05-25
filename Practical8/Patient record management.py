@@ -5,7 +5,7 @@ class Patient:
         self.latestAdmissionDate = latestAdmissionDate
         self.medicalHistory = medicalHistory
     def printAll(self):
-        print( self.name+' ' + self.age +' ' + self.latestAdmissionDate + ' ' +self.medicalHistory) 
+        print(f"Name: {self.name}, Age: {self.age}, Admission Date: {self.latestAdmissionDate}, Medical History: {self.medicalHistory}")
 
 patientExample =Patient("sharei", "18", "4.1", "fever")
 patientExample.printAll()

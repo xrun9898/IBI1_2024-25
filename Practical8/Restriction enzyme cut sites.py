@@ -6,10 +6,10 @@ def find_restriction_sites(dnaSequence, recognitionSequence):
     recog_length = len(recognitionSequence)  
     for n in dnaSequence:
         if n !="A" and n !="C" and n !="G" and n !="T":
-            return "There is an error in the dna sequence."
+             raise ValueError('DNA sequence should only contain A, T, G, C')
     for n in recognitionSequence:
         if n !="A" and n !="C" and n !="G" and n !="T":
-            return "There is an error in the recognition sequence."
+             raise ValueError('DNA sequence should only contain A, T, G, C')
     for i in range(dna_length - recog_length + 1):    
         if dnaSequence[i:i + recog_length] == recognitionSequence:  
             cut_sites.append(i)  
@@ -25,3 +25,4 @@ dnaSequence =input("input dna sequence")
 recognitionSequence = input("input recognition sequence")
 result = find_restriction_sites(dnaSequence, recognitionSequence)  
 print("Restriction endonuclease cleavage site:", result)  
+
