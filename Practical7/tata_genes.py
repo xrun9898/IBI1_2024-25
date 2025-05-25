@@ -1,6 +1,6 @@
 import re  
 
-file = open("Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa", "r")  
+file = open("Practical7/Saccharomyces_cerevisiae.R64-1-1.cdna.all.fa", "r")  
 newFile = open("tata_genes.fa", "w")  
 
 gene_pattern = re.compile(r'>.*?gene:(\S+).*?') 

@@ -13,7 +13,7 @@ with open('Practical7/tata_genes.fa', 'r') as infile, open(output_filename, 'w')
     tata_pattern=re.compile(r'TATA[AT]A[AT]')
     gene_name_pattern=re.compile(r'gene:(\S+)')
     splice_pattern=re.compile(fr'{splice_input[:2]}.*?{splice_input[-2:]}')
-
+    tata_box_number=0
     for line in infile: 
         if gene_name_pattern.search(line):
             if current_gene and current_sequence:
@@ -26,7 +26,8 @@ with open('Practical7/tata_genes.fa', 'r') as infile, open(output_filename, 'w')
                             tata_box_seq=tata_pattern.findall(i)
                             tata_box_number+=len(tata_box_seq)
                             outfile.write(f'>{current_gene[0]}, the number of instances of TATA box is {tata_box_number} \n')
-                            outfile.writelines(current_sequence)                 
+                            full_sequence = ''.join(line.strip() for line in current_sequence)
+                            outfile.write(full_sequence + '\n')              
             current_gene=gene_name_pattern.findall(line)
             current_sequence=[]
 
@@ -42,4 +43,7 @@ with open('Practical7/tata_genes.fa', 'r') as infile, open(output_filename, 'w')
                     tata_box_seq=tata_pattern.findall(i)
                     tata_box_number+=len(tata_box_seq)
             outfile.write(f'>{current_gene[0]}, the number of instances of TATA box is {tata_box_number} \n')
-            outfile.writelines(current_sequence)
+            full_sequence = ''.join(line.strip() for line in current_sequence)
+            outfile.write(full_sequence + '\n')
+         
+
