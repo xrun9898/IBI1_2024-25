@@ -22,7 +22,7 @@ rarray = [r]
 days = [0]   
 gamma = 0.05
 beta = 0.3
-plt.figure(figsize=(6,4), dpi = 300)
+plt.figure(figsize=(6,4), dpi = 200)
 for day in range(1, 1000):  
     ran = np.random.rand(i)  
     for num in ran:  
@@ -50,4 +50,3 @@ plt.title('SIR Model')
 plt.legend()  
 plt.grid()  
 plt.show()  
-

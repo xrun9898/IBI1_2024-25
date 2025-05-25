@@ -3,8 +3,8 @@ def previous program as genplot
 loop ten times
 change the initial s and r values due to the vaccine
 show the plot
-'''
 
+'''
 import numpy as np  
 import matplotlib.pyplot as plt  
 plt.figure(figsize=(6,4), dpi = 200)
@@ -46,3 +46,4 @@ plt.title('SIR Model with different vacciane rate')
 plt.legend()  
 plt.grid()  
 plt.show()  
+
