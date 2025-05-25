@@ -13,7 +13,6 @@ boolean_index = dalys_data['Year'] == 1990
 dalys_1990 = dalys_data.loc[boolean_index, [True,False,False,True ]]  
 print(dalys_1990)
 
-
 uk = dalys_data.loc[dalys_data.Entity=="United Kingdom", ["DALYs", "Year"]]
 plt.plot(uk.Year, uk.DALYs, 'bo')
 plt.title("DALYs in the UK")
